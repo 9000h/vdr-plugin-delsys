@@ -1,0 +1,42 @@
+delsys - Plugin to restrict delivery systems
+============================================
+Version:                      0.0.1
+
+Written by:                   Oliver Endriss <o.endriss@gmx.de>
+
+Latest version available at:  http://www.escape-edv.de/endriss/vdr
+
+Requirements:                 VDR 1.7.23 or later
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License version 2
+as published by the Free Software Foundation.
+
+See the file COPYING for more information.
+
+
+Description
+-----------
+This plugin allows to turn off delivery systems for a device.
+It may be used to disable
+- one or more delivery systems for multi-delivery-system devices.
+- tuners not connected to a cable
+- the tuner of an old full-featured card.
+
+For now the configuration is static and must be compiled-in.
+See 'TODO: configuration' in delsys.c.
+
+Examples:
+(1) DVB-C/DVB-T combo device: Allow DVB-T, disable DVB-C
+    dvb_c_action[0] = action_deny; // device 0: no DVB-C
+
+(2) DVB-C/DVB-T combo device: Allow DVB-C, disable DVB-T
+    dvb_t_action[1] = action_deny; // device 1: no DVB-T
+
+(3) Disable the tuner of an old full-featured DVB-S card
+    dvb_s_action[0] = action_deny; // device 0: no DVB-S
+
+
+Have fun,
+
+Oliver
