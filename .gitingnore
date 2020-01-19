@@ -4,5 +4,3 @@ syntax: glob
 *.o
 *.so
 .dependencies
-po/*.mo
-po/*.pot
